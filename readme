@@ -1,0 +1,23 @@
+---listar workers
+kubectl get nodes
+kubectl get nodes -o wide
+
+
+
+--listar pods
+kubectl get pods
+kubectl get pods -o wide -n default
+
+
+--listar context
+kubectx 
+
+
+kubectl get services
+kubectl get deployments
+
+
+kubectl port-forward svc/<nome> 8080:80
+
+
+cliente -> dns -> cluster -> service -> deployment
