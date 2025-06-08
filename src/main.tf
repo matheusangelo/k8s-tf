@@ -11,7 +11,7 @@ terraform {
 provider "kind" {}
 
 resource "kind_cluster" "default" {
-  name           = "test-cluster"
+  name           = var.name_cluster
   wait_for_ready = true
 
   kind_config {
@@ -36,19 +36,19 @@ resource "kind_cluster" "default" {
     }
 
     node {
-      role = "worker"
+      role = var.worker_type
     }
 
     node {
-      role = "worker"
+      role = var.worker_type
     }
 
     node {
-      role = "worker"
+      role = var.worker_type
     }
 
     node {
-      role = "worker"
+      role = var.worker_type
     }
   }
 }
